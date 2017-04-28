@@ -1,0 +1,43 @@
+<section>
+    <h1 style="margin-bottom: 20px;">Stack Builders Test</h1>
+    <select [(ngModel)]="filterOption" id="mainselection">
+        <option *ngFor="let filter of filters" [ngValue]="filter.id">{{filter.description}}</option>
+    </select>
+    <label class="switch">
+        <input type="checkbox" (change)="toggleAutomaticUpdates()">
+        <div class="slider round"></div>
+    </label>
+    <label class="switch-label">
+    Automatic Updates
+    </label>
+    <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+                <tr>
+                    <th>Order Number</th>
+                    <th>Title</th>
+                    <th>Comments</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                <tr *ngFor="let post of posts | async | query: filterOption">
+                    <td>{{post.orderNumber}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.commentsAmount != 0 ? post.commentsAmount : 'No comments done yet'}}</td>
+                    <td>{{post.points != 0 ? post.points : 'No points scored yet'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- follow me template -->
+<div class="made-with-love">
+    Made with
+    <i>♥</i> by
+    <a target="_blank" href="https://msanandrea.000webhostapp.com/">Mariano San Andrea</a>
+</div>
