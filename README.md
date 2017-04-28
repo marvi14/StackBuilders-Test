@@ -1,6 +1,9 @@
-# FinancialApp
+# Stack Builders Test
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+
+NOTE: In order to test this project, clone the repo, cd path, ng serve and ENABLE CORS IN YOUR BROWSER. Otherwise, the crawler service won't be able to
+fectch the HTML of the given URL
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

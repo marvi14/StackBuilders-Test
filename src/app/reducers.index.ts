@@ -34,18 +34,4 @@ export function getPostsFromState(state$: Observable<State>) {
 	return state$.select(state => state.posts);
 }
 
-// export function getCurrencies(state$: Observable<State>) {
-// 	return state$.select(state => state.currencies);
-// }
-
-// export function getLoggedUser(state$: Observable<State>) {
-// 	return state$.select(state => state.loggedUser);
-// }
-
-// Function composition is one of the building blocks of functional programming. It executes a set of functions, putting the returned value of the first function as the argument for the second function. 
-// In math, composition of two functions f(x) and g(x) would result in f(g(x)).
-// export const getEntities = compose(fromOperations.getEntities, getOperations);
-// export const getCurrencyEntities = compose(fromCurrencies.getCurrenciesEntities, getCurrencies);
-// export const getSelectedCurrency = compose(fromCurrencies.getSelectedCurrency, getCurrencies);
-// export const getCurrencyRates = compose(fromCurrencies.getRates, getCurrencies);
 export const getPosts = compose(fromPosts.getPosts, getPostsFromState);
