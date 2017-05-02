@@ -1,10 +1,10 @@
-import { FinancialAppPage } from './app.po';
+import { StackbuildersTestPage } from './app.po';
 
-describe('financial-app App', function() {
-  let page: FinancialAppPage;
+describe('stackbuilders-test App', () => {
+  let page: StackbuildersTestPage;
 
   beforeEach(() => {
-    page = new FinancialAppPage();
+    page = new StackbuildersTestPage();
   });
 
   it('should display message saying app works', () => {

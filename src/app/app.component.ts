@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PushNotificationsService } from 'angular2-notifications';
+import { Router } from "@angular/router";
 
 @Component({
 	selector: 'app-root',
@@ -7,6 +8,8 @@ import { PushNotificationsService } from 'angular2-notifications';
 })
 
 export class AppComponent {
-	constructor(private _push: PushNotificationsService) {
+	constructor(private _push: PushNotificationsService, private router: Router) {
+		if (this.router.url === '/')
+			this.router.navigate(['/main']);
 	}
 }
