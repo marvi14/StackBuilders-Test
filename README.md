@@ -20,4 +20,6 @@ Inside the modules folder, is where the application modules are. Each module, ha
 
 We use Redux as it help us a lot managing the application state, reducing complexity and keeping full control over all the application. As Redux guys define thereselve, Redux provides an easy way to centralize the state of your application. In addition, in these days, if your use functional programming (Redux, Mobx, Flux) you're cool, so I want to be cool!
 
+About tests, I decided to use Protractor (based on Karma + Jasmine), as it can achive not only Unit Testing but also end-to-end tests (in conjunction with Selenium driver). This way, we can develop automation tests, and simulate automatically the user interaction with our applications.
+
 Any further questions and comments will be well received in our next interview. I've made my best to demonstrate some of the experience I've beeing acquiring this time as a Frontend engineer, but as the task was so open, I don't know if I was able to pleased you, but I hope so. Anyway, thank you for your time :)
